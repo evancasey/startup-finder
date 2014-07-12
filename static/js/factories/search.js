@@ -5,7 +5,7 @@ SF.StartupFinder.Factories.factory('Search', ['$http', '$q', function ($http, $q
 		get: function (search_options) {
 			var deferred = $q.defer();
 
-			$http.get('companies', {params: search_options})
+			$http.post('companies', {data: search_options})
 				.success(function (data, status, headers, config) {
 					deferred.resolve(data);
 				}).error(function (data, status, headers, config) {
