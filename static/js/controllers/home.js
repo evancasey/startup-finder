@@ -13,4 +13,9 @@ SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope
 		$location.path('/results');
 	};
 
+	// Set up auto-tag conversion
+	$('.search-container__option').children('input').each(function (index, element) {
+		$(element).tagsInput();
+	});
+
 }]);

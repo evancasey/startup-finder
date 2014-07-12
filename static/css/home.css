@@ -36,11 +36,9 @@
 }
 
 .search-container__option input {
-	border: 3px solid #e54e45;
+	border: 0;
 	height: 35px;
 	border-radius: 0;
-	width: 75%;
-	margin-bottom: 30px;
 }
 
 .search-container__submit input {
