@@ -14,19 +14,13 @@ html, body {
 body {
 	font-family: ubuntu;
 	min-width: 960px;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 a, a:hover {
 	color: black;
 	text-decoration: none;
-}
-
-h4 {
-	font-size: 26px;
-}
-
-h5 {
-	font-family: 20px;
 }
 
 #container {
@@ -46,7 +40,7 @@ footer {
 	background-color: white;
 	border-bottom: 1px solid #e54e45;
 
-	font-size: 36px;
+	font-size: 2.2em;
 
 	padding: 20px;
 	margin: 0;
