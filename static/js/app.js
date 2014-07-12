@@ -25,7 +25,7 @@ SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($route
 			templateUrl: 'static/partials/about.html',
 			controller: 'AboutController'
 		})
-        .when('/profile', 
+        .when('/profile',
         {
             templateUrl: 'static/partials/profile.html',
             controller: 'ProfileController'
@@ -37,4 +37,9 @@ SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($route
 
 SF.StartupFinder.run(['$rootScope', function ($rootScope) {
 	$rootScope.results = [];
+	$rootScope.search_options = {
+		locations: [],
+		sizes: [],
+		languages: []
+	};
 }]);

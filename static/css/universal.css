@@ -26,7 +26,7 @@ a, a:hover {
 #container {
 	height: 90%;
 	background-color: #cecccd;
-	overflow: auto;
+	overflow: hidden;
 }
 
 footer {
