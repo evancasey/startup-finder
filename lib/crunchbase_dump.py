@@ -80,7 +80,9 @@ class CrunchBaseListener:
 
     def is_valid(self, org_with_details):
 
-        if org_with_details['properties'].get('is_closed', None) == True: 
+        if not org_with_details.get('properties', None):
+            return False
+        elif org_with_details['properties'].get('is_closed', None) == True: 
             return False
         elif not org_with_details['properties'].get('total_funding_usd', None):
             return False

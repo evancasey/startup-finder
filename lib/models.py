@@ -17,7 +17,6 @@ Session = scoped_session(sessionmaker(db))
 db.echo = False
 
 class CrunchBase(Base):
-  ''' Class to store individual tweet traits '''
   
   __tablename__ = 'crunchbase'
 
@@ -33,7 +32,14 @@ class CrunchBase(Base):
   founders = Column(String)
   headquarters = Column(String)  
   news = Column(String)
-  
+
+class Github(Base):
+
+  __tablename__ = 'github'
+
+  id = Column(String, primary_key=True)
+  organization = Column(String)
+  repos = Column(String)
 
 # create our db
 Base.metadata.create_all(db)
