@@ -15,7 +15,21 @@ SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($route
 			templateUrl: 'static/partials/home.html',
 			controller: 'HomeController'
 		})
+		.when('/results',
+		{
+			templateUrl: 'static/partials/results.html',
+			controller: 'ResultsController'
+		})
+		.when('/about',
+		{
+			templateUrl: 'static/partials/about.html',
+			controller: 'AboutController'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
+}]);
+
+SF.StartupFinder.run(['$rootScope', function ($rootScope) {
+	$rootScope.results = [];
 }]);

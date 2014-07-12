@@ -1,8 +1,16 @@
-SF.StartupFinder.Controllers.controller('HomeController', ['$scope', 'Search', function ($scope, Search) {
-	$scope.foo = 'bar';
+SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope', 'Search', '$location', function ($scope, $rootScope, Search, $location) {
+	$scope.search_options = {
+		location: '',
+		size: '',
+		languages: ''
+	};
 
-	Search.get().then(function (data) {
-		$scope.results = data.results;
-	});
+	$scope.search = function () {
+		Search.get($scope.search_options).then(function (data) {
+			$rootScope.results = data.results;
+		});
+
+		$location.path('/results');
+	};
 
 }]);
