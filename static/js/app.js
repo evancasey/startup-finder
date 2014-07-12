@@ -6,7 +6,9 @@ SF.StartupFinder.Factories = angular.module('StartupFinder_app.factories', ['ngR
 SF.StartupFinder.Directives = angular.module('StartupFinder_app.directives', ['ngRoute']);
 
 
-SF.StartupFinder.config(['$routeProvider', function ($routeProvider) {
+SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+	$locationProvider.html5Mode(true).hashPrefix('!');
+
 	$routeProvider
 		.when('/',
 		{
