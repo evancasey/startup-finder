@@ -25,6 +25,10 @@ SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($route
 			templateUrl: 'static/partials/about.html',
 			controller: 'AboutController'
 		})
+        .when('/profile', 
+            templateUrl: 'static/partials/profile.html',
+            controller: 'ProfileController'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});
