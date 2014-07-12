@@ -108,7 +108,6 @@
                     ).insertBefore('#' + id + '_addTag');
 
 					tagslist.push(value);
-					debugger;
 
 					switch (this.parentElement.getAttribute('id')) {
 						case 'locations':
@@ -127,8 +126,6 @@
 							}
 							break;
 					}
-
-					angular.element($('#search')).scope().search_options.locations.push(value);
 
 					$('#'+id+'_tag').val('');
 					if (options.focus) {
