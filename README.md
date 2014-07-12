@@ -1,4 +1,9 @@
-startup-finder
-==============
+Run:
+```bash
+$ pip install -r requirements.txt
+```
 
-HackNY 2014 Summer Hackathon
+Start the app:
+```bash
+$ python app.py
+```
