@@ -41,7 +41,7 @@ def search():
 						  "crunchbase-url":"http://crunchbase.com/organization/buzzfeed",
 						  "logo-url":"http://a3.images.crunchbase.com/image/upload/c_pad,h_98,w_98/v1397183627/f8f063b7cc03d05841d03a3c764936a6.png"}]}
 
-	return render_template("results.html", companies=sample)
+	return jsonify(sample)
 
 #-----------------------------------
 # launch
