@@ -2,7 +2,9 @@
 	<div id="filter-sidebar">
 		<div class="filter-sidebar__option">
 			<h4>Current filters:</h4>
-			<div id="current-filters">{{ current_filters }}</div>
+			<div class="suggestion" ng-repeat="filter in current_filters">
+				{{ filter }}
+			</div>
 		</div>
 		<div class="filter-sidebar__option">
 			<h4>Add filters:</h4>
