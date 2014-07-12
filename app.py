@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory, jsonify
+from flask import Flask, render_template, send_from_directory, jsonify, url_for, redirect
 
 #-----------------------------------
 # initialization
@@ -43,9 +43,9 @@ def search():
 
 	return jsonify(sample)
 
-@app.route("/", methods=['GET'])
-def redirect():
-	return render_template('index.html')
+@app.route("/results", methods=['GET'])
+def results():
+	return redirect(url_for('index'))
 
 #-----------------------------------
 # launch
