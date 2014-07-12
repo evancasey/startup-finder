@@ -43,6 +43,10 @@ def search():
 
 	return jsonify(sample)
 
+@app.route("/", methods=['GET'])
+def redirect():
+	return render_template('index.html')
+
 #-----------------------------------
 # launch
 #-----------------------------------
