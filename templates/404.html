@@ -1,6 +1,20 @@
-{% extends "base.html" %}
-{% block title %} - Page Not Found{% endblock %}
-{% block content %}
-  <h1>Page Not Found</h1>
-  <p><a href="{{ url_for('index') }}">home</a></p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Startup Finder</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1>Page Not Found</h1>
+		<p><a href="{{ url_for('index') }}">home</a></p>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<p>&copy; Startup Finder</p>
+		</footer>
+	</body>
+</html>

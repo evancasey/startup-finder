@@ -1,0 +1,44 @@
+@font-face {
+  font-family: ubuntu;
+  src: url('../fonts/Ubuntu-R.ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: ubuntu;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+#container {
+	height: 90%;
+	background-color: #cecccd;
+	overflow: auto;
+}
+
+footer {
+	background-color: #cecccd;
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.navbar {
+	background-color: white;
+	border-bottom: 1px solid #e54e45;
+
+	font-size: 36px;
+
+	padding: 20px;
+	margin: 0;
+}

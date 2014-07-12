@@ -1,0 +1,31 @@
+<div id="search">
+	<span id="tagline">We'll help you find jobs that you care about!</span>
+
+	<div id="search-container">
+		<div class="search-container--column-left">
+			<div class="search-container__option">
+				<h4>Pick your <b>city</b></h4>
+				<input type="text" ng-model="search_options.location">
+			</div>
+			<div class="search-container__option">
+				<h4>Tell use your preferred <b>size</b></h4>
+				<input type="text"ng-model="search_options.size">
+			</div>
+			<div class="search-container__option">
+				<h4><b>Languages</b> you want to work with</h4>
+				<input type="text"ng-model="search_options.languages">
+			</div>
+			<div class="search-container__submit">
+				<input type="button" value="SEARCH" ng-click="search()">
+			</div>
+		</div>
+		<div class="search-container--column-right">
+			<div class="search-container__suggestions">
+				<h4>We suggest:</h4>
+			</div>
+			<div class="search-container__featured">
+				<h4>Featured:</h4>
+			</div>
+		</div>
+	</div>
+</div>

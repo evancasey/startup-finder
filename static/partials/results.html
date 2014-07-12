@@ -1,0 +1,13 @@
+<div id="results">
+	<div class="result" ng-repeat="result in results">
+		<h1 class="result__name">{{ result.organization }}</h1>
+		<h4 class="result__description">{{ result.description }}</h4>
+		<p class="result__technologies">
+			<ul>
+				<li ng-repeat="technology in result.technologies">{{ technology }}</li>
+			</ul>
+		</p>
+		<p class="result__size">{{ result.size }}</p>
+		<p class="result__location">{{ result.location }}</p>
+	</div>
+</div>
