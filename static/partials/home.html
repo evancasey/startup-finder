@@ -1,18 +1,31 @@
 <div id="search">
-	<h1>Hello</h1>
-	<h2>{{ foo }}</h2>
-</div>
+	<span id="tagline">We'll help you find jobs that you care about!</span>
 
-<div id="results">
-	<div class="result" ng-repeat="result in results">
-		<h1 class="result__name">{{ result.organization }}</h1>
-		<h4 class="result__description">{{ result.description }}</h4>
-		<p class="result__technologies">
-			<ul>
-				<li ng-repeat="technology in result.technologies">{{ technology }}</li>
-			</ul>
-		</p>
-		<p class="result__size">{{ result.size }}</p>
-		<p class="result__location">{{ result.location }}</p>
+	<div id="search-container">
+		<div class="search-container--column-left">
+			<div class="search-container__option">
+				<h4>Pick your <b>city</b></h4>
+				<input type="text">
+			</div>
+			<div class="search-container__option">
+				<h4>Tell use your preferred <b>size</b></h4>
+				<input type="text">
+			</div>
+			<div class="search-container__option">
+				<h4><b>Languages</b> you want to work with</h4>
+				<input type="text">
+			</div>
+			<div class="search-container__submit">
+				<input type="button" value="SEARCH">
+			</div>
+		</div>
+		<div class="search-container--column-right">
+			<div class="search-container__suggestions">
+				<h4>We suggest:</h4>
+			</div>
+			<div class="search-container__featured">
+				<h4>Featured:</h4>
+			</div>
+		</div>
 	</div>
 </div>
