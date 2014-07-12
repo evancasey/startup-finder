@@ -26,10 +26,6 @@
 	overflow: auto;
 }
 
-#search-container h4 {
-	font-size: 26px;
-}
-
 .search-container--column-left, .search-container--column-right {
 	width: 50%;
 	float: left;

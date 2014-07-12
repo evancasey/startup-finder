@@ -1,13 +1,52 @@
-<div id="results">
-	<div class="result" ng-repeat="result in results">
-		<h1 class="result__name">{{ result.organization }}</h1>
-		<h4 class="result__description">{{ result.description }}</h4>
-		<p class="result__technologies">
-			<ul>
-				<li ng-repeat="technology in result.technologies">{{ technology }}</li>
-			</ul>
-		</p>
-		<p class="result__size">{{ result.size }}</p>
-		<p class="result__location">{{ result.location }}</p>
+<div id="results-container">
+	<div id="filter-sidebar">
+		<div class="filter-sidebar__option">
+			<h4>Current filters:</h4>
+			<div id="current-filters">{{ current_filters }}</div>
+		</div>
+		<div class="filter-sidebar__option">
+			<h4>Add filters:</h4>
+			<div class="add-filter__option">
+				<h5>Cities:</h5>
+				<input type="text" ng-model="new_filters.location">
+			</div>
+			<div class="add-filter__option">
+				<h5>Size:</h5>
+				<input type="text" ng-model="new_filters.size">
+			</div>
+			<div class="add-filter__option">
+				<h5>Languages:</h5>
+				<input type="text" ng-model="new_filters.languages">
+			</div>
+			<div class="add-filter__submit">
+				<input type="button" value="SEARCH" ng-click="search()">
+			</div>
+		</div>
+	</div>
+
+	<div id="results">
+		<div id="results-header">
+			We found {{ results.length }} startups that match your search
+		</div>
+
+		<div class="result" ng-repeat="result in results">
+			<div class="result__logo">
+				<img src="{{ result.logo_url }}" alt="">
+			</div>
+			<div class="result__body">
+				<div class="result__body__header">
+					<span class="result__name">{{ result.organization }}</span>
+					<span class="result__location">{{ result.location }}</span>
+					<span class="result__size">{{ result.size }}</span>
+				</div>
+				<div class="result__body__public-repos">
+					<h5>Public Repos</h5>
+				</div>
+				<div class="result__body__description">
+					<h5>Description</h5>
+					{{ result.description }}
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

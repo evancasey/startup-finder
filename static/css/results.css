@@ -1,0 +1,92 @@
+#results-container {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4%;
+}
+
+#filter-sidebar {
+	width: 25%;
+	border-top: 15px solid #e54e45;
+	float: left;
+	background-color: white;
+	padding: 20px;
+}
+
+#results {
+	width: 65%;
+	margin-left: 5%;
+	float: left;
+}
+
+#results-header {
+	width: 100%;
+	background-color: #e54e45;
+
+	font-size: 28px;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.filter-sidebar__option {
+	margin-bottom: 30px;
+}
+
+.add-filter__option input {
+	border: 0;
+	height: 35px;
+	border-radius: 0;
+}
+
+.add-filter__submit input {
+	background-color: #e54e45;
+	border: 0;
+	color: white;
+	font-size: 20px;
+	padding: 10px;
+	width: 150px;
+}
+
+.result {
+	background-color: white;
+	padding: 20px;
+	overflow: auto;
+}
+
+.result__logo {
+	width: 20%;
+}
+
+.result__body {
+	width: 80%;
+	padding: 20px;
+}
+
+.result__logo, .result__body {
+	float: left;
+}
+
+.result__body__header {
+	width: 100%;
+	height: 36px;
+}
+
+.result__name {
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.result__name, .result__location, .result__size {
+	float: left;
+}
+
+.result__location, .result__size {
+	background-color: #cecccd;
+	padding: 5px;
+	margin-left: 30px;
+}
+
+.result__body__public-repos, .result__body__description {
+	width: 50%;
+	float: left;
+}
