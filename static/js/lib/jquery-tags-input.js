@@ -251,7 +251,10 @@
 
 				if (settings.autocomplete_data != undefined) {
 					if (jQuery.ui.autocomplete !== undefined) {
-						$(data.fake_input).autocomplete({source: settings.autocomplete_data});
+						var element = this;
+						$(data.fake_input).autocomplete({
+							source: settings.autocomplete_data
+						});
 						$(data.fake_input).bind('autocompleteselect',data,function(event,ui) {
 							$(event.data.real_input).addTag(ui.item.value,{focus:true,unique:(settings.unique)});
 							return false;

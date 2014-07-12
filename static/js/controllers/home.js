@@ -14,10 +14,8 @@ SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope
 	};
 
 	// Set up auto-tag conversion
-	$('.search-container__option').children('input').each(function (index, element) {
-		$(element).tagsInput({
-			autocomplete_data: AutocompleteData.cities
-		});
-	});
+	$($('.search-container__option').children('input')[0]).tagsInput({autocomplete_data: AutocompleteData.cities});
+	$($('.search-container__option').children('input')[1]).tagsInput({autocomplete_data: AutocompleteData.sizes});
+	$($('.search-container__option').children('input')[2]).tagsInput({autocomplete_data: AutocompleteData.languages});
 
 }]);
