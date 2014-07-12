@@ -107,14 +107,28 @@ def search():
 				"size":"100-500",						  						  
 				"crunchbase-url":"http://crunchbase.com/organization/foursquare",
 				"logo-url":"http://a3.images.crunchbase.com/image/upload/c_pad,h_98,w_98/v1397751280/bab97d5ef0ed2d12e5257688cf56eb6a.png"}]
-	
+
+
 	companies_filtered_on_location = [company for company in companies if company['location'] in locations]
-	# technologies = [company for company in companies_filtered_on_location where company['technologies']]
-	
-	result = {"results": companies_filtered_on_location} 
-	
+	technologies = [(company['organization'],company['technologies']) for company in companies_filtered_on_location]
+
+	all_tech = []
+
+	for (n,t) in technologies:
+
+		technologies_names = [technology['name'] for technology in t]
+		all_tech.append((n,technologies_names))
+
+	tech_names = [tn[0] for tn in all_tech if intersect(tn[1],languages)]	
+	companies_filtered_on_technology = [company for company in companies if company['organization'] in tech_names]	
+	pdb.set_trace()
+	result = {"results": companies_filtered_on_technology} 
 
 	return jsonify(result)
+
+	
+def intersect(a, b):
+	return list(set(a) & set(b))
 
 @app.route("/results", methods=['GET'])
 def results():
