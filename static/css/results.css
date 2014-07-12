@@ -51,10 +51,18 @@
 	background-color: white;
 	padding: 20px;
 	overflow: auto;
+	margin-bottom: 40px;
 }
 
 .result__logo {
 	width: 20%;
+}
+
+.result__logo img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35%;
 }
 
 .result__body {

@@ -24,16 +24,16 @@ a, a:hover {
 }
 
 #container {
-	height: 90%;
 	background-color: #cecccd;
-	overflow: hidden;
+	overflow: auto;
+	padding-bottom: 50px;
 }
 
 footer {
 	background-color: #cecccd;
 	display: block;
 	text-align: center;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .navbar {

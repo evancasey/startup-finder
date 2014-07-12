@@ -33,7 +33,7 @@
 
 		<div class="result" ng-repeat="result in results">
 			<div class="result__logo">
-				<img src="{{ result.logo_url }}" alt="">
+				<img src="{{ result['logo-url'] }}" alt="">
 			</div>
 			<div class="result__body">
 				<div class="result__body__header">
@@ -42,7 +42,10 @@
 					<span class="result__size">{{ result.size }}</span>
 				</div>
 				<div class="result__body__public-repos">
-					<h5>Public Repos</h5>
+					<h5>Technologies</h5>
+					<ul>
+						<li ng-repeat="technology in result.technologies">{{ technology.name }}: {{ technology.lines }} lines</li>
+					</ul>
 				</div>
 				<div class="result__body__description">
 					<h5>Description</h5>
