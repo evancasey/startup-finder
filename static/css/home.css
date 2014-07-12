@@ -1,5 +1,10 @@
+h4 {
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
 #search {
-	width: 80%;
+	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 4%;
@@ -9,8 +14,7 @@
 	display: block;
 	text-align: center;
 	color: white;
-	font-size: 28px;
-
+	font-size: 2.0em;
 	margin-bottom: 40px;
 }
 
@@ -26,10 +30,6 @@
 	overflow: auto;
 }
 
-#search-container h4 {
-	font-size: 26px;
-}
-
 .search-container--column-left, .search-container--column-right {
 	width: 50%;
 	float: left;
@@ -37,7 +37,7 @@
 
 .search-container__option input {
 	border: 0;
-	height: 35px;
+	height: 30px;
 	border-radius: 0;
 }
 
@@ -48,4 +48,16 @@
 	font-size: 20px;
 	padding: 10px;
 	width: 150px;
+}
+
+.search-container__suggestions {
+    width: 90%;
+}
+
+.suggestion {
+    background-color: #ddd;
+    padding: 8px 10px;
+    margin: 4px 4px;
+    display: inline-block;
+    font-size: 1.2em;
 }

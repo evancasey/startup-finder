@@ -53,3 +53,7 @@ docs/_build/
 
 tokens.py
 lib/companies.db
+
+
+*.swp
+*~
