@@ -26,6 +26,7 @@ SF.StartupFinder.config(['$routeProvider', '$locationProvider', function ($route
 			controller: 'AboutController'
 		})
         .when('/profile', 
+        {
             templateUrl: 'static/partials/profile.html',
             controller: 'ProfileController'
         })
