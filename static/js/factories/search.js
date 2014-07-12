@@ -2,10 +2,10 @@
 // Each request returns a promise of eventual completion
 SF.StartupFinder.Factories.factory('Search', ['$http', '$q', function ($http, $q) {
 	return {
-		get: function () {
+		get: function (search_options) {
 			var deferred = $q.defer();
 
-			$http.get('companies')
+			$http.get('companies', {params: search_options})
 				.success(function (data, status, headers, config) {
 					deferred.resolve(data);
 				}).error(function (data, status, headers, config) {

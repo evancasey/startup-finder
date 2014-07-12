@@ -108,6 +108,27 @@
                     ).insertBefore('#' + id + '_addTag');
 
 					tagslist.push(value);
+					debugger;
+
+					switch (this.parentElement.getAttribute('id')) {
+						case 'locations':
+							if (angular.element($('#search')).scope().search_options.locations.indexOf(value) == -1) {
+								angular.element($('#search')).scope().search_options.locations.push(value);
+							}
+							break;
+						case 'sizes':
+							if (angular.element($('#search')).scope().search_options.sizes.indexOf(value) == -1) {
+								angular.element($('#search')).scope().search_options.sizes.push(value);
+							}
+							break;
+						case 'languages':
+							if (angular.element($('#search')).scope().search_options.languages.indexOf(value) == -1) {
+								angular.element($('#search')).scope().search_options.languages.push(value);
+							}
+							break;
+					}
+
+					angular.element($('#search')).scope().search_options.locations.push(value);
 
 					$('#'+id+'_tag').val('');
 					if (options.focus) {
