@@ -1,4 +1,4 @@
-SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope', 'Search', '$location', function ($scope, $rootScope, Search, $location) {
+SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope', 'Search', 'AutocompleteData', '$location', function ($scope, $rootScope, Search, AutocompleteData, $location) {
 	$scope.search_options = {
 		location: '',
 		size: '',
@@ -15,7 +15,9 @@ SF.StartupFinder.Controllers.controller('HomeController', ['$scope', '$rootScope
 
 	// Set up auto-tag conversion
 	$('.search-container__option').children('input').each(function (index, element) {
-		$(element).tagsInput();
+		$(element).tagsInput({
+			autocomplete_data: AutocompleteData.cities
+		});
 	});
 
 }]);
