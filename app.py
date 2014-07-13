@@ -101,7 +101,7 @@ def search():
 				"location":"New York, New York",
 				"founders":["Naveen Selvadurai", "Dennis Crowley"],
 				"founded":"2009",
-				"technologies":[{"name":"Javascript","lines": 14131},
+				"technologies":[{"name":"Scala","lines": 14131},
 								  {"name":"Python","lines": 6104},
 								  {"name":"Perl","lines": 4251}],						  						  
 				"size":"100-500",						  						  
@@ -121,7 +121,7 @@ def search():
 
 	tech_names = [tn[0] for tn in all_tech if intersect(tn[1],languages)]	
 	companies_filtered_on_technology = [company for company in companies if company['organization'] in tech_names]	
-	pdb.set_trace()
+
 	result = {"results": companies_filtered_on_technology} 
 
 	return jsonify(result)
